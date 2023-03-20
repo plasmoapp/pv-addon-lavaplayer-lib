@@ -1,7 +1,18 @@
 # pv-addon-lavaplayer-lib
-Addon library with bundled [LavaPlayer fork](https://github.com/Walkyst/lavaplayer-fork)
+Addon library bundled with [LavaPlayer fork](https://github.com/Walkyst/lavaplayer-fork) library that is needed for some Plasmo Voice add-ons.
 
-## Adding to the project
+## Installation
+
+1. Download the add-on from [Modrinth](https://modrinth.com/mod/pv-addon-lavaplayer-lib)
+2. Install the add-on:
+    - If you need the library for a Paper add-on, install it as a Paper plugin in the `~/plugins` directory.
+    - If you need the library for a universal add-on, install it as a universal PV add-on.
+        - For Paper, install the library in `~/plugins/PlasmoVoice/addons`.
+        - For Fabric or Forge, install the library in `~/mods/PlasmoVoice/addons`.
+    - If you have both universal and Paper add-ons that require the library, you need to install it as both a universal and a Paper add-on.
+3. Restart the server
+
+## Adding to the project (For developers)
 ### Kotlin DSL
 ```kotlin
 repositories {
