@@ -36,6 +36,16 @@ jobs:
         modrinth-id: Kx9d4acU
         modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
         
+        loaders: |
+          fabric
+          forge
+          quilt
+          bukkit
+          velocity
+          bungeecord
+        game-versions: |
+          1.19
+        
     - name: Publish to GitHub
       uses: Apehum/mc-publish@v1.1
       with:
