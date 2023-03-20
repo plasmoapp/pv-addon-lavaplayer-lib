@@ -31,14 +31,10 @@ jobs:
     - name: Publish to Modrinth/CurseForge
       uses: Apehum/mc-publish@v1.1
       with:
-        name: 'PV Addon LavaPlayer Lib'
-
-        # modrinth-unfeature-mode: 'none'
-        # modrinth-id: 1bZhdhsH
-        # modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
-
-        # curseforge-id: 394468
-        # curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
+        name: 'pv-addon-lavaplayer-lib'
+        
+        modrinth-id: Kx9d4acU
+        modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
         
     - name: Publish to GitHub
       uses: Apehum/mc-publish@v1.1
