@@ -1,4 +1,21 @@
+<img src="https://i.imgur.com/MBlP2bD.png" width="256"/>
+
+<div>
+    <a href="https://modrinth.com/mod/plasmo-voice">Plasmo Voice</a>
+    <span> | </span>
+    <a href="https://modrinth.com/mod/pv-addon-lavaplayer-lib">Modrinth</a>
+    <span> | </span>
+    <a href="https://www.spigotmc.org/resources/plasmo-voice-server.91064/">Spigot</a>
+    <span> | </span>
+    <a href="https://github.com/plasmoapp/pv-addon-lavaplayer-lib/">GitHub</a>
+    <span> | </span>
+    <a href="https://discord.com/invite/uueEqzwCJJ">Discord</a>
+     <span> | </span>
+    <a href="https://www.patreon.com/plasmomc">Patreon</a>
+</div>
+
 # pv-addon-lavaplayer-lib
+
 Addon library bundled with [LavaPlayer fork](https://github.com/Walkyst/lavaplayer-fork) library that is needed for some Plasmo Voice add-ons.
 
 ## Installation
