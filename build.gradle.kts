@@ -51,7 +51,6 @@ tasks {
         relocate("ibxm", "su.plo.voice.lavaplayer.ibxm")
         relocate("net.sourceforge", "su.plo.voice.lavaplayer.net.sourceforge")
         relocate("org.json", "su.plo.voice.lavaplayer.org.json")
-        relocate("org.mozilla", "su.plo.voice.lavaplayer.org.mozilla")
     }
 
     build {
