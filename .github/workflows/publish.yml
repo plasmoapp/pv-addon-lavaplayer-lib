@@ -30,9 +30,7 @@ jobs:
 
     - name: Publish to Modrinth/CurseForge
       uses: Apehum/mc-publish@v1.1
-      with:
-        name: 'pv-addon-lavaplayer-lib'
-        
+      with:        
         modrinth-id: Kx9d4acU
         modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
         
