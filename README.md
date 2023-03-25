@@ -22,11 +22,8 @@ Addon library bundled with [LavaPlayer fork](https://github.com/Walkyst/lavaplay
 
 1. Download the add-on from [Modrinth](https://modrinth.com/mod/pv-addon-lavaplayer-lib)
 2. Install the add-on:
-    - If you need the library for a Paper add-on, install it as a Paper plugin in the `~/plugins` directory.
-    - If you need the library for a universal add-on, install it as a universal PV add-on.
-        - For Paper, install the library in `~/plugins/PlasmoVoice/addons`.
-        - For Fabric or Forge, install the library in `~/mods/PlasmoVoice/addons`.
-    - If you have both universal and Paper add-ons that require the library, you need to install it as both a universal and a Paper add-on.
+   - For Paper, install the library in `~/plugins`.
+   - For Fabric or Forge, install the library in `~/mods`.
 3. Restart the server
 
 ## Adding to the project (For developers)
@@ -37,7 +34,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly("su.plo:pv-addon-lavaplayer-lib:1.0.1")
+    compileOnly("su.plo:pv-addon-lavaplayer-lib:1.0.2")
 }
 ```
 ### Groovy DSL
@@ -47,28 +44,8 @@ repositories {
 }
 
 dependencies {
-    compileOnly 'su.plo:pv-addon-lavaplayer-lib:1.0.1'
+    compileOnly 'su.plo:pv-addon-lavaplayer-lib:1.0.2'
 }
-```
-### Maven
-```xml
-<project>
-    <repositories>
-        <repository>
-            <id>plasmo-repo</id>
-            <url>https://repo.plo.su</url>
-        </repository>
-    </repositories>
-    
-    <dependencies>
-        <dependency>
-            <groupId>su.plo</groupId>
-            <artifactId>pv-addon-lavaplayer-lib</artifactId>
-            <version>1.0.1</version>
-            <scope>provided</scope>
-        </dependency>
-    </dependencies>
-</project>
 ```
 
 ## Using with universal addons
@@ -77,7 +54,7 @@ dependencies {
 @Addon(
     ...
     dependencies = [
-        Dependency(id = "lavaplayer-lib")
+        Dependency(id = "pv-addon-lavaplayer-lib")
     ]
 )
 ```
@@ -86,7 +63,7 @@ dependencies {
 @Addon(
     ...
     dependencies = {
-        @Dependency(id = "lavaplayer-lib")
+        @Dependency(id = "pv-addon-lavaplayer-lib")
     }
 )
 ```
