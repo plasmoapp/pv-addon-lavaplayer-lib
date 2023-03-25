@@ -41,6 +41,9 @@ jobs:
           forge
           quilt
           bukkit
+          paper
+          spigot
+          bukkit
           velocity
           bungeecord
         game-versions: |
