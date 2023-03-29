@@ -1,4 +1,4 @@
-<img src="https://i.imgur.com/MBlP2bD.png" width="256"/>
+![](https://i.imgur.com/Z5S9yGW.png)
 
 <div>
     <a href="https://modrinth.com/mod/plasmo-voice">Plasmo Voice</a>
