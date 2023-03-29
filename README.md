@@ -16,7 +16,7 @@
 
 # pv-addon-lavaplayer-lib
 
-Addon library bundled with [LavaPlayer fork](https://github.com/Walkyst/lavaplayer-fork) library that is needed for some Plasmo Voice add-ons.
+Add-on bundled with [LavaPlayer fork](https://github.com/Walkyst/lavaplayer-fork) library required for some Plasmo Voice add-ons.
 
 ## Installation
 
