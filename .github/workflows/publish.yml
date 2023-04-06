@@ -33,6 +33,8 @@ jobs:
       with:        
         modrinth-id: Kx9d4acU
         modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+
+        changelog-file: changelog.md
         
         loaders: |
           fabric
