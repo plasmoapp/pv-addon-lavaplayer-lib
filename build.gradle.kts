@@ -1,12 +1,14 @@
+val plasmoVoiceVersion: String by rootProject
+
 plugins {
     kotlin("jvm") version("1.6.10")
     id("com.github.johnrengelman.shadow") version("7.0.0")
-    id("su.plo.voice.plugin") version("1.0.0")
+    id("su.plo.voice.plugin") version("1.0.1")
     `maven-publish`
 }
 
 group = "su.plo"
-version = "1.0.2"
+version = "1.0.3"
 
 repositories {
     mavenCentral()
@@ -20,10 +22,8 @@ repositories {
 dependencies {
     compileOnly(kotlin("stdlib-jdk8"))
 
-    compileOnly("com.destroystokyo.paper:paper-api:1.16.5-R0.1-SNAPSHOT")
-
-    compileOnly("su.plo.voice.api:server:2.0.0+ALPHA")
-    compileOnly("su.plo.voice.api:proxy:2.0.0+ALPHA")
+    compileOnly("su.plo.voice.api:server:$plasmoVoiceVersion")
+    compileOnly("su.plo.voice.api:proxy:$plasmoVoiceVersion")
 
     implementation("com.github.walkyst:lavaplayer-fork:1.4.0")
     shadow("com.github.walkyst:lavaplayer-fork:1.4.0") {
