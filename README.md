@@ -1,4 +1,4 @@
-<img src="https://i.imgur.com/MBlP2bD.png" width="256"/>
+![](https://i.imgur.com/Z5S9yGW.png)
 
 <div>
     <a href="https://modrinth.com/mod/plasmo-voice">Plasmo Voice</a>
@@ -16,7 +16,7 @@
 
 # pv-addon-lavaplayer-lib
 
-Addon library bundled with [LavaPlayer fork](https://github.com/Walkyst/lavaplayer-fork) library that is needed for some Plasmo Voice add-ons.
+Add-on bundled with [LavaPlayer fork](https://github.com/Walkyst/lavaplayer-fork) library required for some Plasmo Voice add-ons.
 
 ## Installation
 
