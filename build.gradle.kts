@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "su.plo"
-version = "1.0.3"
+version = "1.0.4"
 
 repositories {
     mavenCentral()
@@ -25,7 +25,7 @@ dependencies {
     compileOnly("su.plo.voice.api:server:$plasmoVoiceVersion")
     compileOnly("su.plo.voice.api:proxy:$plasmoVoiceVersion")
 
-    implementation("com.github.walkyst:lavaplayer-fork:1.4.0")
+    compileOnly("com.github.walkyst:lavaplayer-fork:1.4.0")
     shadow("com.github.walkyst:lavaplayer-fork:1.4.0") {
         exclude("org.slf4j")
     }
@@ -38,19 +38,24 @@ tasks {
 
     shadowJar {
         configurations = listOf(project.configurations.shadow.get())
+        mergeServiceFiles()
 
         archiveBaseName.set(rootProject.name)
         archiveClassifier.set("")
         archiveAppendix.set("")
 
-        relocate("org.apache", "su.plo.voice.lavaplayer.org.apache")
-        relocate("org.jsoup", "su.plo.voice.lavaplayer.org.jsoup")
-        relocate("com.fasterxml", "su.plo.voice.lavaplayer.com.fasterxml")
-        relocate("com.fasterxml", "su.plo.voice.lavaplayer.com.fasterxml")
-        relocate("net.iharder", "su.plo.voice.lavaplayer.net.iharder")
-        relocate("ibxm", "su.plo.voice.lavaplayer.ibxm")
-        relocate("net.sourceforge", "su.plo.voice.lavaplayer.net.sourceforge")
-        relocate("org.json", "su.plo.voice.lavaplayer.org.json")
+        relocate("org.apache", "su.plo.voice.lavaplayer.libs.org.apache")
+        relocate("org.jsoup", "su.plo.voice.lavaplayer.libs.org.jsoup")
+        relocate("com.fasterxml", "su.plo.voice.lavaplayer.libs.com.fasterxml")
+        relocate("com.fasterxml", "su.plo.voice.lavaplayer.libs.com.fasterxml")
+        relocate("net.iharder", "su.plo.voice.lavaplayer.libs.net.iharder")
+        relocate("ibxm", "su.plo.voice.lavaplayer.libs.ibxm")
+        relocate("net.sourceforge", "su.plo.voice.lavaplayer.libs.net.sourceforge")
+        relocate("org.json", "su.plo.voice.lavaplayer.libs.org.json")
+        relocate("org.mozilla", "su.plo.voice.lavaplayer.libs.org.mozilla")
+        relocate("com.sedmelluq", "su.plo.voice.lavaplayer.libs.com.sedmelluq")
+        relocate("mozilla", "su.plo.voice.lavaplayer.libs.mozilla")
+        relocate("certificates", "su.plo.voice.lavaplayer.libs.certificates")
     }
 
     build {
