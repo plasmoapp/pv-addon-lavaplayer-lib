@@ -33,5 +33,6 @@ jobs:
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         files-primary: build/libs/!(*-@(dev|sources|javadoc)).jar
+        files-secondary: build/libs/*-@(disabled).jar
         github-generate-changelog: true
         github-prerelease: true
