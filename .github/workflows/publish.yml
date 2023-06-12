@@ -35,6 +35,8 @@ jobs:
         modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
 
         changelog-file: changelog.md
+        files-primary: build/libs/!(*-@(dev|sources|javadoc)).jar
+        files-secondary: build/libs/*-@(disabled).jar
         
         loaders: |
           fabric
@@ -51,4 +53,6 @@ jobs:
     - name: Publish to GitHub
       uses: Apehum/mc-publish@v1.1
       with:
+        files-primary: build/libs/!(*-@(dev|sources|javadoc)).jar
+        files-secondary: build/libs/*-@(disabled).jar
         github-token: ${{ secrets.GITHUB_TOKEN }}

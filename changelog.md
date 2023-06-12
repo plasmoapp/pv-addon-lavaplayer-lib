@@ -1,1 +1,1 @@
-- relocate kotlin to support Plasmo Voice 2.0.3
+- relocate lavaplayer to fix conflicts with other plugins
