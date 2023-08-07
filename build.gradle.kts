@@ -53,7 +53,9 @@ tasks {
         relocate("net.sourceforge", "su.plo.voice.lavaplayer.libs.net.sourceforge")
         relocate("org.json", "su.plo.voice.lavaplayer.libs.org.json")
         relocate("org.mozilla", "su.plo.voice.lavaplayer.libs.org.mozilla")
-        relocate("com.sedmelluq", "su.plo.voice.lavaplayer.libs.com.sedmelluq")
+        relocate("com.sedmelluq", "su.plo.voice.lavaplayer.libs.com.sedmelluq") {
+            exclude("com/sedmelluq/discord/lavaplayer/natives/**")
+        }
         relocate("mozilla", "su.plo.voice.lavaplayer.libs.mozilla")
         relocate("certificates", "su.plo.voice.lavaplayer.libs.certificates")
     }
