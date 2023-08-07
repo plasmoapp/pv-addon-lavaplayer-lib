@@ -1,1 +1,2 @@
-- relocate lavaplayer to fix conflicts with other plugins
+- Native java classes was moved back to fix audio codecs
+- Use another fork of lavaplayer to fix 403 error with youtube
