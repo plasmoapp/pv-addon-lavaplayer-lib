@@ -3,12 +3,12 @@ val plasmoVoiceVersion: String by rootProject
 plugins {
     kotlin("jvm") version("1.6.10")
     id("com.github.johnrengelman.shadow") version("7.0.0")
-    id("su.plo.voice.plugin") version("1.0.1")
+    id("su.plo.voice.plugin") version("1.0.2-SNAPSHOT")
     `maven-publish`
 }
 
 group = "su.plo"
-version = "1.0.5"
+version = "1.0.6"
 
 repositories {
     mavenCentral()
@@ -37,6 +37,8 @@ tasks {
     }
 
     shadowJar {
+        dependsOn(reobf)
+
         configurations = listOf(project.configurations.shadow.get())
         mergeServiceFiles()
 
