@@ -1,20 +1,18 @@
 val plasmoVoiceVersion: String by rootProject
 
 plugins {
-    kotlin("jvm") version("1.6.10")
+    kotlin("jvm") version("1.8.22")
     id("com.github.johnrengelman.shadow") version("7.0.0")
-    id("su.plo.voice.plugin") version("1.0.2-SNAPSHOT")
+    id("su.plo.voice.plugin.entrypoints") version("1.0.2-SNAPSHOT")
     `maven-publish`
 }
-
-group = "su.plo"
-version = "1.0.6"
 
 repositories {
     mavenCentral()
     mavenLocal()
 
     maven("https://repo.plo.su")
+    maven("https://repo.plasmoverse.com/snapshots")
     maven("https://jitpack.io/")
     maven("https://repo.papermc.io/repository/maven-public/")
 }
@@ -34,6 +32,7 @@ dependencies {
 tasks {
     java {
         withSourcesJar()
+        toolchain.languageVersion.set(JavaLanguageVersion.of(16))
     }
 
     shadowJar {
