@@ -16,7 +16,7 @@
 
 # pv-addon-lavaplayer-lib
 
-Add-on bundled with [LavaPlayer fork](https://github.com/Walkyst/lavaplayer-fork) library required for some Plasmo Voice add-ons.
+Add-on bundled with [LavaPlayer fork](https://github.com/lavalink-devs/lavaplayer) library required for some Plasmo Voice add-ons.
 
 ## Installation
 
@@ -34,7 +34,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly("su.plo:pv-addon-lavaplayer-lib:1.0.2")
+    compileOnly("su.plo:pv-addon-lavaplayer-lib:1.0.7")
 }
 ```
 ### Groovy DSL
@@ -44,7 +44,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly 'su.plo:pv-addon-lavaplayer-lib:1.0.2'
+    compileOnly 'su.plo:pv-addon-lavaplayer-lib:1.0.7'
 }
 ```
 
