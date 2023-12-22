@@ -1,2 +1,1 @@
-- Native java classes was moved back to fix audio codecs
-- Use another fork of lavaplayer to fix 403 error with youtube
+- Lavaplayer updated to fix https://github.com/lavalink-devs/lavaplayer/pull/44
