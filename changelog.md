@@ -1,1 +1,1 @@
-- Folia support
+- Lavaplayer updated to fix https://github.com/lavalink-devs/lavaplayer/pull/44
