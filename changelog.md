@@ -1,1 +1,1 @@
-- Lavaplayer updated to fix https://github.com/lavalink-devs/lavaplayer/pull/44
+Version for Plasmo Voice 2.1+
