@@ -23,8 +23,8 @@ dependencies {
     compileOnly("su.plo.voice.api:server:$plasmoVoiceVersion")
     compileOnly("su.plo.voice.api:proxy:$plasmoVoiceVersion")
 
-    compileOnly("dev.arbjerg:lavaplayer:1.5.0")
-    shadow("dev.arbjerg:lavaplayer:1.5.0") {
+    compileOnly("dev.arbjerg:lavaplayer:1.5.2")
+    shadow("dev.arbjerg:lavaplayer:1.5.2") {
         exclude("org.slf4j")
     }
 }
