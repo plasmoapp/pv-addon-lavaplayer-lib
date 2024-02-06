@@ -37,8 +37,6 @@ tasks {
     }
 
     shadowJar {
-        dependsOn(reobf)
-
         configurations = listOf(project.configurations.shadow.get())
         mergeServiceFiles()
 
