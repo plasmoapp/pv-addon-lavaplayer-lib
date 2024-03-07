@@ -17,6 +17,7 @@ repositories {
     maven("https://repo.plo.su")
     maven("https://jitpack.io/")
     maven("https://repo.papermc.io/repository/maven-public/")
+    maven("https://maven.lavalink.dev/snapshots")
 }
 
 dependencies {
@@ -25,8 +26,8 @@ dependencies {
     compileOnly("su.plo.voice.api:server:$plasmoVoiceVersion")
     compileOnly("su.plo.voice.api:proxy:$plasmoVoiceVersion")
 
-    compileOnly("dev.arbjerg:lavaplayer:1.5.2")
-    shadow("dev.arbjerg:lavaplayer:1.5.2") {
+    compileOnly("dev.arbjerg:lavaplayer:495ea87beef35b161fc14138ab3523ecb97ba684-SNAPSHOT")
+    shadow("dev.arbjerg:lavaplayer:495ea87beef35b161fc14138ab3523ecb97ba684-SNAPSHOT") {
         exclude("org.slf4j")
     }
 }
