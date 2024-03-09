@@ -1,1 +1,2 @@
-- Lavaplayer updated to fix https://github.com/lavalink-devs/lavaplayer/pull/44
+- Lavaplayer was updated to fix playback errors
+- Removed relocation of "org.mozilla" to fix errors caused by incorrect relocation
