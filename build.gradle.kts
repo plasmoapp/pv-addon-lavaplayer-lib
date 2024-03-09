@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "su.plo"
-version = "1.0.6"
+version = "1.0.7"
 
 repositories {
     mavenCentral()
@@ -17,6 +17,7 @@ repositories {
     maven("https://repo.plo.su")
     maven("https://jitpack.io/")
     maven("https://repo.papermc.io/repository/maven-public/")
+    maven("https://maven.lavalink.dev/snapshots")
 }
 
 dependencies {
@@ -25,8 +26,8 @@ dependencies {
     compileOnly("su.plo.voice.api:server:$plasmoVoiceVersion")
     compileOnly("su.plo.voice.api:proxy:$plasmoVoiceVersion")
 
-    compileOnly("dev.arbjerg:lavaplayer:1.5.0")
-    shadow("dev.arbjerg:lavaplayer:1.5.0") {
+    compileOnly("dev.arbjerg:lavaplayer:495ea87beef35b161fc14138ab3523ecb97ba684-SNAPSHOT")
+    shadow("dev.arbjerg:lavaplayer:495ea87beef35b161fc14138ab3523ecb97ba684-SNAPSHOT") {
         exclude("org.slf4j")
     }
 }
@@ -54,7 +55,7 @@ tasks {
         relocate("ibxm", "su.plo.voice.lavaplayer.libs.ibxm")
         relocate("net.sourceforge", "su.plo.voice.lavaplayer.libs.net.sourceforge")
         relocate("org.json", "su.plo.voice.lavaplayer.libs.org.json")
-        relocate("org.mozilla", "su.plo.voice.lavaplayer.libs.org.mozilla")
+//        relocate("org.mozilla", "su.plo.voice.lavaplayer.libs.org.mozilla")
         relocate("com.sedmelluq", "su.plo.voice.lavaplayer.libs.com.sedmelluq") {
             exclude("com/sedmelluq/discord/lavaplayer/natives/**")
         }
