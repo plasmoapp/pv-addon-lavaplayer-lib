@@ -55,7 +55,7 @@ tasks {
         relocate("ibxm", "su.plo.voice.lavaplayer.libs.ibxm")
         relocate("net.sourceforge", "su.plo.voice.lavaplayer.libs.net.sourceforge")
         relocate("org.json", "su.plo.voice.lavaplayer.libs.org.json")
-        relocate("org.mozilla", "su.plo.voice.lavaplayer.libs.org.mozilla")
+//        relocate("org.mozilla", "su.plo.voice.lavaplayer.libs.org.mozilla")
         relocate("com.sedmelluq", "su.plo.voice.lavaplayer.libs.com.sedmelluq") {
             exclude("com/sedmelluq/discord/lavaplayer/natives/**")
         }
