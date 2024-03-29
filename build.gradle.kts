@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "su.plo"
-version = "1.0.7"
+version = "1.0.8"
 
 repositories {
     mavenCentral()
@@ -26,8 +26,8 @@ dependencies {
     compileOnly("su.plo.voice.api:server:$plasmoVoiceVersion")
     compileOnly("su.plo.voice.api:proxy:$plasmoVoiceVersion")
 
-    compileOnly("dev.arbjerg:lavaplayer:495ea87beef35b161fc14138ab3523ecb97ba684-SNAPSHOT")
-    shadow("dev.arbjerg:lavaplayer:495ea87beef35b161fc14138ab3523ecb97ba684-SNAPSHOT") {
+    compileOnly("dev.arbjerg:lavaplayer:1.5.3")
+    shadow("dev.arbjerg:lavaplayer:1.5.3") {
         exclude("org.slf4j")
     }
 }

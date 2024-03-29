@@ -1,2 +1,1 @@
 - Lavaplayer was updated to fix playback errors
-- Removed relocation of "org.mozilla" to fix errors caused by incorrect relocation
