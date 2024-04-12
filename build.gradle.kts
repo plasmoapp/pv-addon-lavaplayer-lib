@@ -8,6 +8,10 @@ plugins {
     `maven-publish`
 }
 
+if (properties.containsKey("snapshot")) {
+    version = "$version-SNAPSHOT"
+}
+
 repositories {
     mavenCentral()
     mavenLocal()
