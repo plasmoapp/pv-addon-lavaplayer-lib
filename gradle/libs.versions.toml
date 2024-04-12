@@ -1,0 +1,21 @@
+[versions]
+kotlin = "1.8.22"
+
+pv = "2.1.0-SNAPSHOT"
+
+lavaplayer = "0eaeee195f0315b2617587aa3537fa202df07ddc-SNAPSHOT"
+
+pv-gradle-plugin = "1.0.2-SNAPSHOT"
+shadow = "7.0.0"
+
+
+[libraries]
+pv-server = { module = "su.plo.voice.api:server", version.ref = "pv" }
+pv-proxy = { module = "su.plo.voice.api:proxy", version.ref = "pv" }
+
+lavaplayer = { module = "dev.arbjerg:lavaplayer", version.ref = "lavaplayer" }
+
+[plugins]
+shadow = { id = "com.github.johnrengelman.shadow", version.ref = "shadow" }
+pv-entrypoints = { id = "su.plo.voice.plugin.entrypoints", version.ref = "pv-gradle-plugin" }
+pv-java-templates = { id = "su.plo.voice.plugin.java-templates", version.ref = "pv-gradle-plugin" }

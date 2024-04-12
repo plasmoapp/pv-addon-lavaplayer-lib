@@ -15,18 +15,26 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Set up JDK 17
+    - name: Set up JDK
       uses: actions/setup-java@v3
       with:
-        java-version: '17'
-        distribution: 'temurin'
-        server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
-        settings-path: ${{ github.workspace }} # location for the settings.xml file
+        distribution: temurin
+        java-version: |
+          16
+          17
 
     - name: Build with Gradle
       uses: gradle/gradle-build-action@v2
       with:
         arguments: build
+
+    - name: Publish to releases maven repository
+      uses: gradle/gradle-build-action@v2
+      env:
+        MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
+        MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
+      with:
+        arguments: publish --stacktrace
 
     - name: Publish to Modrinth/CurseForge
       uses: Apehum/mc-publish@v1.1
@@ -46,11 +54,17 @@ jobs:
           velocity
           bungeecord
         game-versions: |
+          1.16.5
+          1.17.1
+          1.18.2
           1.19.2
           1.19.3
           1.19.4
           1.20
           1.20.1
+          1.20.2
+          1.20.3
+          1.20.4
         
     - name: Publish to GitHub
       uses: Apehum/mc-publish@v1.1
@@ -58,3 +72,4 @@ jobs:
         files-primary: build/libs/!(*-@(dev|sources|javadoc)).jar
         files-secondary: build/libs/*-@(disabled).jar
         github-token: ${{ secrets.GITHUB_TOKEN }}
+        changelog-file: changelog.md

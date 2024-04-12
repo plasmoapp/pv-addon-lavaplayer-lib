@@ -1,20 +1,19 @@
 val plasmoVoiceVersion: String by rootProject
 
 plugins {
-    kotlin("jvm") version("1.6.10")
-    id("com.github.johnrengelman.shadow") version("7.0.0")
-    id("su.plo.voice.plugin") version("1.0.2-SNAPSHOT")
+    kotlin("jvm") version(libs.versions.kotlin.get())
+    alias(libs.plugins.shadow)
+    alias(libs.plugins.pv.entrypoints)
+    alias(libs.plugins.pv.java.templates)
     `maven-publish`
 }
-
-group = "su.plo"
-version = "1.0.8"
 
 repositories {
     mavenCentral()
     mavenLocal()
 
-    maven("https://repo.plo.su")
+    maven("https://repo.plasmoverse.com/snapshots")
+    maven("https://repo.plasmoverse.com/releases")
     maven("https://jitpack.io/")
     maven("https://repo.papermc.io/repository/maven-public/")
     maven("https://maven.lavalink.dev/snapshots")
@@ -23,23 +22,22 @@ repositories {
 dependencies {
     compileOnly(kotlin("stdlib-jdk8"))
 
-    compileOnly("su.plo.voice.api:server:$plasmoVoiceVersion")
-    compileOnly("su.plo.voice.api:proxy:$plasmoVoiceVersion")
+    compileOnly(libs.pv.server)
+    compileOnly(libs.pv.proxy)
 
-    compileOnly("dev.arbjerg:lavaplayer:0eaeee195f0315b2617587aa3537fa202df07ddc-SNAPSHOT")
-    shadow("dev.arbjerg:lavaplayer:0eaeee195f0315b2617587aa3537fa202df07ddc-SNAPSHOT") {
+    compileOnly(libs.lavaplayer)
+    shadow(libs.lavaplayer) {
         exclude("org.slf4j")
     }
 }
 
 tasks {
     java {
+        toolchain.languageVersion.set(JavaLanguageVersion.of(16)) // lavaplayer supports only java 16+
         withSourcesJar()
     }
 
     shadowJar {
-        dependsOn(reobf)
-
         configurations = listOf(project.configurations.shadow.get())
         mergeServiceFiles()
 
@@ -74,14 +72,22 @@ configure<PublishingExtension> {
     }
 
     repositories {
-        val mavenUser = project.findProperty("maven_user")
-        val mavenPassword = project.findProperty("maven_password")
+        if (properties.containsKey("snapshot")) {
+            maven("https://repo.plasmoverse.com/snapshots") {
+                name = "PlasmoVerseSnapshots"
 
-        if (mavenUser != null && mavenPassword != null) {
-            maven("https://repo.plo.su/public/") {
                 credentials {
-                    username = mavenUser.toString()
-                    password = mavenPassword.toString()
+                    username = System.getenv("MAVEN_USERNAME")
+                    password = System.getenv("MAVEN_PASSWORD")
+                }
+            }
+        } else {
+            maven("https://repo.plasmoverse.com/releases") {
+                name = "PlasmoVerseReleases"
+
+                credentials {
+                    username = System.getenv("MAVEN_USERNAME")
+                    password = System.getenv("MAVEN_PASSWORD")
                 }
             }
         }
