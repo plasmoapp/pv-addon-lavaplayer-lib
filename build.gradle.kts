@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "su.plo"
-version = "1.0.7"
+version = "1.0.8"
 
 repositories {
     mavenCentral()
@@ -26,8 +26,11 @@ dependencies {
     compileOnly("su.plo.voice.api:server:$plasmoVoiceVersion")
     compileOnly("su.plo.voice.api:proxy:$plasmoVoiceVersion")
 
-    compileOnly("dev.arbjerg:lavaplayer:495ea87beef35b161fc14138ab3523ecb97ba684-SNAPSHOT")
-    shadow("dev.arbjerg:lavaplayer:495ea87beef35b161fc14138ab3523ecb97ba684-SNAPSHOT") {
+    compileOnly("com.github.lavalink-devs.lavaplayer-youtube-source:plugin:1.0.5")
+    shadow("com.github.lavalink-devs.lavaplayer-youtube-source:plugin:1.0.5")
+
+    compileOnly("dev.arbjerg:lavaplayer:20f37dff305238a382557cb98b6b714516c23a99-SNAPSHOT")
+    shadow("dev.arbjerg:lavaplayer:20f37dff305238a382557cb98b6b714516c23a99-SNAPSHOT") {
         exclude("org.slf4j")
     }
 }
@@ -56,6 +59,12 @@ tasks {
         relocate("net.sourceforge", "su.plo.voice.lavaplayer.libs.net.sourceforge")
         relocate("org.json", "su.plo.voice.lavaplayer.libs.org.json")
 //        relocate("org.mozilla", "su.plo.voice.lavaplayer.libs.org.mozilla")
+
+        relocate("dev.lavalink", "su.plo.voice.lavaplayer.libs.dev.lavalink")
+        relocate("com.grack", "su.plo.voice.lavaplayer.libs.com.grack")
+
+        exclude("lavalink-plugins/**")
+
         relocate("com.sedmelluq", "su.plo.voice.lavaplayer.libs.com.sedmelluq") {
             exclude("com/sedmelluq/discord/lavaplayer/natives/**")
         }
@@ -74,14 +83,20 @@ configure<PublishingExtension> {
     }
 
     repositories {
-        val mavenUser = project.findProperty("maven_user")
-        val mavenPassword = project.findProperty("maven_password")
+        maven("https://repo.plasmoverse.com/releases") {
+            name = "plasmoverseReleases"
 
-        if (mavenUser != null && mavenPassword != null) {
-            maven("https://repo.plo.su/public/") {
+            if (System.getenv("MAVEN_USERNAME") != null) {
                 credentials {
-                    username = mavenUser.toString()
-                    password = mavenPassword.toString()
+                    username = System.getenv("MAVEN_USERNAME")
+                    password = System.getenv("MAVEN_PASSWORD")
+                }
+            }
+
+            if (findProperty("plasmoverseReleasesUsername") != null) {
+                credentials(PasswordCredentials::class)
+                authentication {
+                    create<BasicAuthentication>("basic")
                 }
             }
         }

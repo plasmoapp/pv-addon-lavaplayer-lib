@@ -1,2 +1,1 @@
-- Lavaplayer was updated to fix playback errors
-- Removed relocation of "org.mozilla" to fix errors caused by incorrect relocation
+- New [youtube source](https://github.com/lavalink-devs/youtube-source) bundled to fix "Video returned by YouTube isn't what was requsted" issue. Make sure to update the pv-addon-discs to the latest version for the new source to work.
