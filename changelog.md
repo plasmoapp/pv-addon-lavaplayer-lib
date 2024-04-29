@@ -1,1 +1,1 @@
-- Lavaplayer was updated to fix playback errors
+- New [youtube source](https://github.com/lavalink-devs/youtube-source) bundled to fix "Video returned by YouTube isn't what was requsted" issue. Make sure to update the pv-addon-discs to the latest version for the new source to work.
