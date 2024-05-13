@@ -21,6 +21,7 @@ repositories {
     maven("https://jitpack.io/")
     maven("https://repo.papermc.io/repository/maven-public/")
     maven("https://maven.lavalink.dev/snapshots")
+    maven("https://maven.lavalink.dev/releases")
 }
 
 dependencies {
@@ -28,6 +29,9 @@ dependencies {
 
     compileOnly(libs.pv.server)
     compileOnly(libs.pv.proxy)
+
+    compileOnly(libs.lavaplayer.youtube)
+    shadow(libs.lavaplayer.youtube)
 
     compileOnly(libs.lavaplayer)
     shadow(libs.lavaplayer) {
@@ -58,6 +62,12 @@ tasks {
         relocate("net.sourceforge", "su.plo.voice.lavaplayer.libs.net.sourceforge")
         relocate("org.json", "su.plo.voice.lavaplayer.libs.org.json")
 //        relocate("org.mozilla", "su.plo.voice.lavaplayer.libs.org.mozilla")
+
+        relocate("dev.lavalink", "su.plo.voice.lavaplayer.libs.dev.lavalink")
+        relocate("com.grack", "su.plo.voice.lavaplayer.libs.com.grack")
+
+        exclude("lavalink-plugins/**")
+
         relocate("com.sedmelluq", "su.plo.voice.lavaplayer.libs.com.sedmelluq") {
             exclude("com/sedmelluq/discord/lavaplayer/natives/**")
         }
