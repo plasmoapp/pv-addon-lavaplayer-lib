@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "su.plo"
-version = "1.0.9"
+version = "1.0.10"
 
 repositories {
     mavenCentral()
@@ -18,6 +18,7 @@ repositories {
     maven("https://jitpack.io/")
     maven("https://repo.papermc.io/repository/maven-public/")
     maven("https://maven.lavalink.dev/snapshots")
+    maven("https://maven.lavalink.dev/releases")
 }
 
 dependencies {
@@ -26,11 +27,11 @@ dependencies {
     compileOnly("su.plo.voice.api:server:$plasmoVoiceVersion")
     compileOnly("su.plo.voice.api:proxy:$plasmoVoiceVersion")
 
-    compileOnly("com.github.lavalink-devs.lavaplayer-youtube-source:plugin:9b233d801e13eafdca7ba99c43a42dc56fa6840b")
-    shadow("com.github.lavalink-devs.lavaplayer-youtube-source:plugin:9b233d801e13eafdca7ba99c43a42dc56fa6840b")
+    compileOnly("dev.lavalink.youtube:common:d2c55d93f3b668970f6f1521d8a67bee09977aef-SNAPSHOT")
+    shadow("dev.lavalink.youtube:common:d2c55d93f3b668970f6f1521d8a67bee09977aef-SNAPSHOT")
 
-    compileOnly("dev.arbjerg:lavaplayer:20f37dff305238a382557cb98b6b714516c23a99-SNAPSHOT")
-    shadow("dev.arbjerg:lavaplayer:20f37dff305238a382557cb98b6b714516c23a99-SNAPSHOT") {
+    compileOnly("dev.arbjerg:lavaplayer:1.5.4")
+    shadow("dev.arbjerg:lavaplayer:1.5.4") {
         exclude("org.slf4j")
     }
 }
