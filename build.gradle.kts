@@ -27,8 +27,8 @@ dependencies {
     compileOnly("su.plo.voice.api:server:$plasmoVoiceVersion")
     compileOnly("su.plo.voice.api:proxy:$plasmoVoiceVersion")
 
-    compileOnly("dev.lavalink.youtube:common:d2c55d93f3b668970f6f1521d8a67bee09977aef-SNAPSHOT")
-    shadow("dev.lavalink.youtube:common:d2c55d93f3b668970f6f1521d8a67bee09977aef-SNAPSHOT")
+    compileOnly("dev.lavalink.youtube:common:1.4.0")
+    shadow("dev.lavalink.youtube:common:1.4.0")
 
     compileOnly("dev.arbjerg:lavaplayer:1.5.4")
     shadow("dev.arbjerg:lavaplayer:1.5.4") {
