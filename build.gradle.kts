@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "su.plo"
-version = "1.0.10"
+version = "1.0.11"
 
 repositories {
     mavenCentral()
@@ -27,8 +27,8 @@ dependencies {
     compileOnly("su.plo.voice.api:server:$plasmoVoiceVersion")
     compileOnly("su.plo.voice.api:proxy:$plasmoVoiceVersion")
 
-    compileOnly("dev.lavalink.youtube:common:1.4.0")
-    shadow("dev.lavalink.youtube:common:1.4.0")
+    compileOnly("dev.lavalink.youtube:common:e3b83da4eb34899dcf3698e654f78e08acaf06ab-SNAPSHOT")
+    shadow("dev.lavalink.youtube:common:e3b83da4eb34899dcf3698e654f78e08acaf06ab-SNAPSHOT")
 
     compileOnly("dev.arbjerg:lavaplayer:1.5.4")
     shadow("dev.arbjerg:lavaplayer:1.5.4") {
