@@ -1,1 +1,2 @@
-- Updated [youtube source](https://github.com/lavalink-devs/youtube-source) to add YouTube authorization
+- Updated [youtube source](https://github.com/lavalink-devs/youtube-source) to fix playback issues
+- YouTube authorization (requires [pre-release](https://github.com/plasmoapp/pv-addon-discs/releases/tag/1.0.8) of pv-addon-discs)
