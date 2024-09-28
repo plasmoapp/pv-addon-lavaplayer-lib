@@ -3,8 +3,8 @@ kotlin = "1.8.22"
 
 pv = "2.1.0-SNAPSHOT"
 
-lavaplayer = "1.5.4"
-lavaplayer-youtube-source = "1.7.1"
+lavaplayer = "1.5.6"
+lavaplayer-youtube-source = "1.8.3"
 
 pv-gradle-plugin = "1.0.2-SNAPSHOT"
 shadow = "7.0.0"
