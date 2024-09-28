@@ -1,4 +1,4 @@
-name: Publish
+name: Publish Release
 
 on:
   push:
@@ -14,27 +14,20 @@ jobs:
       packages: write
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Set up JDK
-      uses: actions/setup-java@v3
+      uses: actions/setup-java@v4
       with:
         distribution: temurin
         java-version: |
           16
           17
 
-    - name: Build with Gradle
-      uses: gradle/gradle-build-action@v2
-      with:
-        arguments: build
+    - name: Setup Gradle
+      uses: gradle/actions/setup-gradle@v3
 
-    - name: Publish to releases maven repository
-      uses: gradle/gradle-build-action@v2
-      env:
-        MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
-        MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
-      with:
-        arguments: publish --stacktrace
+    - name: Build with Gradle
+      run: ./gradlew build
 
     - name: Publish to Modrinth/CurseForge
       uses: Apehum/mc-publish@v1.1
@@ -49,6 +42,7 @@ jobs:
         loaders: |
           fabric
           forge
+          neoforge
           paper
           spigot
           velocity
@@ -65,6 +59,10 @@ jobs:
           1.20.2
           1.20.3
           1.20.4
+          1.20.5
+          1.20.6
+          1.21
+          1.21.1
         
     - name: Publish to GitHub
       uses: Apehum/mc-publish@v1.1
@@ -72,4 +70,5 @@ jobs:
         files-primary: build/libs/!(*-@(dev|sources|javadoc)).jar
         files-secondary: build/libs/*-@(disabled).jar
         github-token: ${{ secrets.GITHUB_TOKEN }}
+        github-generate-changelog: false
         changelog-file: changelog.md

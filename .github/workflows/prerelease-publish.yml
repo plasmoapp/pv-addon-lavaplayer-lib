@@ -14,34 +14,26 @@ jobs:
       packages: write
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Set up JDK
-      uses: actions/setup-java@v3
+      uses: actions/setup-java@v4
       with:
         distribution: temurin
         java-version: |
+          8
           16
           17
 
-    - name: Build with Gradle
-      uses: gradle/gradle-build-action@v2
-      with:
-        arguments: build -Psnapshot=true
+    - name: Setup Gradle
+      uses: gradle/actions/setup-gradle@v3
 
-    - name: Publish to snapshots maven repository
-      uses: gradle/gradle-build-action@v2
-      env:
-        MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
-        MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
-      with:
-        arguments: publish --stacktrace -Psnapshot=true
+    - name: Build with Gradle
+      run: ./gradlew build
 
     - name: Publish to GitHub
       uses: Apehum/mc-publish@v1.1
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
-        files-primary: build/libs/!(*-@(dev|sources|javadoc)).jar
-        files-secondary: build/libs/*-@(disabled).jar
-        github-generate-changelog: false
+        github-generate-changelog: true
         github-prerelease: true
         changelog-file: changelog.md
