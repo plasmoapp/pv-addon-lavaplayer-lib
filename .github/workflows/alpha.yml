@@ -29,6 +29,9 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
 
+    - name: Publish to maven repository
+      run: ./gradlew publish
+
     - name: Publish to Modrinth/CurseForge
       uses: Apehum/mc-publish@v1.1
       with:        
