@@ -30,7 +30,10 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
 
-    - name: Publish to maven repository
+    - name: Publish to maven repository`
+      env:
+        MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
+        MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
       run: ./gradlew publish -Psnapshot=true
 
     - name: Publish to GitHub
