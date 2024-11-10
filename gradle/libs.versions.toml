@@ -3,12 +3,11 @@ kotlin = "1.8.22"
 
 pv = "2.1.0-SNAPSHOT"
 
-lavaplayer = "1.5.6"
-lavaplayer-youtube-source = "1.8.3"
+lavaplayer = "2.2.2"
+lavaplayer-youtube-source = "c358ae412eeae61f87b6f99acfa57e8b91cc9218-SNAPSHOT"
 
 pv-gradle-plugin = "1.0.2-SNAPSHOT"
-shadow = "7.0.0"
-
+shadow = "8.1.1"
 
 [libraries]
 pv-server = { module = "su.plo.voice.api:server", version.ref = "pv" }

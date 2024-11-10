@@ -22,6 +22,7 @@ repositories {
     maven("https://repo.papermc.io/repository/maven-public/")
     maven("https://maven.lavalink.dev/snapshots")
     maven("https://maven.lavalink.dev/releases")
+//    maven("https://maven.topi.wtf/releases")
 }
 
 dependencies {
@@ -30,10 +31,17 @@ dependencies {
     compileOnly(libs.pv.server)
     compileOnly(libs.pv.proxy)
 
-    compileOnly(libs.lavaplayer.youtube)
     shadow(libs.lavaplayer.youtube)
 
-    compileOnly(libs.lavaplayer)
+//    shadow("com.github.topi314.lavasrc:lavasrc:4.3.0") {
+//        exclude("org.jetbrains.kotlin")
+//        exclude("org.jetbrains.kotlinx")
+//    }
+//    shadow("com.github.topi314.lavasrc:lavasrc-protocol:4.3.0") {
+//        exclude("org.jetbrains.kotlin")
+//        exclude("org.jetbrains.kotlinx")
+//    }
+
     shadow(libs.lavaplayer) {
         exclude("org.slf4j")
     }
@@ -41,7 +49,7 @@ dependencies {
 
 tasks {
     java {
-        toolchain.languageVersion.set(JavaLanguageVersion.of(16)) // lavaplayer supports only java 16+
+        toolchain.languageVersion.set(JavaLanguageVersion.of(11)) // lavaplayer supports only java 11
         withSourcesJar()
     }
 
@@ -61,10 +69,15 @@ tasks {
         relocate("ibxm", "su.plo.voice.lavaplayer.libs.ibxm")
         relocate("net.sourceforge", "su.plo.voice.lavaplayer.libs.net.sourceforge")
         relocate("org.json", "su.plo.voice.lavaplayer.libs.org.json")
+        relocate("org.intellij", "su.plo.voice.lavaplayer.libs.org.intellij")
+        relocate("org.jetbrains", "su.plo.voice.lavaplayer.libs.org.jetbrains")
 //        relocate("org.mozilla", "su.plo.voice.lavaplayer.libs.org.mozilla")
 
         relocate("dev.lavalink", "su.plo.voice.lavaplayer.libs.dev.lavalink")
         relocate("com.grack", "su.plo.voice.lavaplayer.libs.com.grack")
+        relocate("com.github.topi314", "su.plo.voice.lavaplayer.libs.com.github.topi314")
+        relocate("com.auth0", "su.plo.voice.lavaplayer.libs.com.auth0")
+        relocate("dev.schlaubi", "su.plo.voice.lavaplayer.libs.dev.schlaubi")
 
         exclude("lavalink-plugins/**")
 
