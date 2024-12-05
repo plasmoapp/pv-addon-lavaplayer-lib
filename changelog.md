@@ -1,1 +1,2 @@
 - Lavaplayer is updated to v2.
+- youtube-source updated to 1.10.2 to fix oauth 400 errors.
