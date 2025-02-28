@@ -1,1 +1,1 @@
-- youtube-source updated to 1.11.4 to fix "Problematic YouTube player script".
+- youtube-source updated to 1.11.5 to fix "Must find action functions from script".
