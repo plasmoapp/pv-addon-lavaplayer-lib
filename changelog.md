@@ -1,1 +1,1 @@
-- youtube-source updated to 1.11.5 to fix "Must find action functions from script".
+- youtube-source updated to the latest snapshot to fix "This video cannot be loaded." ("Must find decipher function from script").
