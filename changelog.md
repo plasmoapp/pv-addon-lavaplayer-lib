@@ -1,1 +1,1 @@
-- youtube-source updated to 1.11.4 to fix "Problematic YouTube player script".
+- youtube-source updated to the latest snapshot to fix "This video cannot be loaded." ("Must find decipher function from script").
