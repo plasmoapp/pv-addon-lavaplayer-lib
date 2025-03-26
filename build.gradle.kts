@@ -22,6 +22,10 @@ repositories {
     maven("https://repo.papermc.io/repository/maven-public/")
     maven("https://maven.lavalink.dev/snapshots")
     maven("https://maven.lavalink.dev/releases")
+
+    // https://github.com/lavalink-devs/youtube-source/pull/123
+    maven("https://maven.kikkia.dev/snapshots")
+
 //    maven("https://maven.topi.wtf/releases")
 }
 
