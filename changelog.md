@@ -1,1 +1,1 @@
-- youtube-source updated to the latest snapshot to fix "This video cannot be loaded." ("Must find decipher function from script").
+- youtube-source updated to 1.12.0 to fix "This video cannot be loaded."
