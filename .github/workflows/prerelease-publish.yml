@@ -27,11 +27,25 @@ jobs:
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@v3
 
+    - name: Get version from gradle.properties
+      run: |
+        VERSION=$(grep "^version=" gradle.properties | cut -d'=' -f2)
+        echo "VERSION=$VERSION" >> $GITHUB_ENV
+
+    - name: Get git hash
+      run: echo "GIT_HASH=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
+
     - name: Publish to maven repository
       env:
         MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
         MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
-      run: ./gradlew publish -Psnapshot=true
+      run: ./gradlew publish -Pversion="${VERSION}-SNAPSHOT"
+
+    - name: Build jar with hash in the name
+      env:
+        MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
+        MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
+      run: ./gradlew clean build -Pversion="${VERSION}+${GIT_HASH}"
 
     - uses: actions/upload-artifact@v4
       with:
