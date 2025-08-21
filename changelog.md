@@ -1,1 +1,1 @@
-- youtube-source updated to [1.13.4](https://github.com/lavalink-devs/youtube-source/releases/tag/1.13.4) to fix "This video cannot be loaded."
+- youtube-source updated to [the latest snapshot](https://github.com/lavalink-devs/youtube-source/commit/4e1af561a9316893724aa69eeef623863c04e655) to fix "This video cannot be loaded."

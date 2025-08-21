@@ -1,10 +1,10 @@
 [versions]
 kotlin = "1.8.22"
 
-pv = "2.1.0-SNAPSHOT"
+pv = "2.1.5"
 
 lavaplayer = "2.2.2"
-lavaplayer-youtube-source = "1.13.4"
+lavaplayer-youtube-source = "4e1af561a9316893724aa69eeef623863c04e655-SNAPSHOT"
 
 pv-gradle-plugin = "1.0.2-SNAPSHOT"
 shadow = "8.1.1"
