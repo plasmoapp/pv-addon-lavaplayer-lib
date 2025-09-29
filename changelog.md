@@ -1,1 +1,1 @@
-- youtube-source updated to [1.13.5](https://github.com/lavalink-devs/youtube-source/releases/tag/1.13.5) to fix "This video cannot be loaded."
+- youtube-source updated to [snapshot](https://github.com/lavalink-devs/youtube-source/commit/ff19b6f1751262ecba7b81fcf391b961008962d1) with remote cipher support.
