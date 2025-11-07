@@ -1,1 +1,1 @@
-- youtube-source updated to [snapshot](https://github.com/lavalink-devs/youtube-source/commit/ff19b6f1751262ecba7b81fcf391b961008962d1) with remote cipher support.
+- youtube-source updated to [1.16.0](https://github.com/lavalink-devs/youtube-source/releases/tag/1.16.0) with remote cipher support.
