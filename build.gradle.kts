@@ -18,7 +18,7 @@ repositories {
     maven("https://repo.papermc.io/repository/maven-public/")
     maven("https://maven.lavalink.dev/snapshots")
     maven("https://maven.lavalink.dev/releases")
-//    maven("https://maven.topi.wtf/releases")
+    maven("https://maven.topi.wtf/releases")
 }
 
 dependencies {
@@ -29,14 +29,10 @@ dependencies {
 
     shadow(libs.lavaplayer.youtube)
 
-//    shadow("com.github.topi314.lavasrc:lavasrc:4.3.0") {
-//        exclude("org.jetbrains.kotlin")
-//        exclude("org.jetbrains.kotlinx")
-//    }
-//    shadow("com.github.topi314.lavasrc:lavasrc-protocol:4.3.0") {
-//        exclude("org.jetbrains.kotlin")
-//        exclude("org.jetbrains.kotlinx")
-//    }
+    shadow("com.github.topi314.lavasrc:lavasrc:4.8.1") {
+        exclude("org.jetbrains.kotlin")
+        exclude("org.jetbrains.kotlinx")
+    }
 
     shadow(libs.lavaplayer) {
         exclude("org.slf4j")
@@ -67,7 +63,7 @@ tasks {
         relocate("org.json", "su.plo.voice.lavaplayer.libs.org.json")
         relocate("org.intellij", "su.plo.voice.lavaplayer.libs.org.intellij")
         relocate("org.jetbrains", "su.plo.voice.lavaplayer.libs.org.jetbrains")
-//        relocate("org.mozilla", "su.plo.voice.lavaplayer.libs.org.mozilla")
+        relocate("org.mozilla", "su.plo.voice.lavaplayer.libs.org.mozilla")
 
         relocate("dev.lavalink", "su.plo.voice.lavaplayer.libs.dev.lavalink")
         relocate("com.grack", "su.plo.voice.lavaplayer.libs.com.grack")
