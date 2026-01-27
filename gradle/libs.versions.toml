@@ -3,8 +3,9 @@ kotlin = "1.8.22"
 
 pv = "2.1.5"
 
-lavaplayer = "2.2.4"
-lavaplayer-youtube-source = "1.16.0"
+lavaplayer = "2.2.6"
+lavaplayer-youtube-source = "1.17.0"
+lavasrc = "4.8.1"
 
 pv-gradle-plugin = "1.0.2-SNAPSHOT"
 shadow = "8.1.1"
@@ -15,6 +16,7 @@ pv-proxy = { module = "su.plo.voice.api:proxy", version.ref = "pv" }
 
 lavaplayer = { module = "dev.arbjerg:lavaplayer", version.ref = "lavaplayer" }
 lavaplayer-youtube = { module = "dev.lavalink.youtube:common", version.ref = "lavaplayer-youtube-source" }
+lavasrc = { module = "com.github.topi314.lavasrc:lavasrc", version.ref = "lavasrc" }
 
 [plugins]
 shadow = { id = "com.github.johnrengelman.shadow", version.ref = "shadow" }

@@ -29,7 +29,7 @@ dependencies {
 
     shadow(libs.lavaplayer.youtube)
 
-    shadow("com.github.topi314.lavasrc:lavasrc:4.8.1") {
+    shadow(libs.lavasrc) {
         exclude("org.jetbrains.kotlin")
         exclude("org.jetbrains.kotlinx")
     }

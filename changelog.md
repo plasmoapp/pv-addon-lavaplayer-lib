@@ -1,1 +1,2 @@
-- youtube-source updated to [1.16.0](https://github.com/lavalink-devs/youtube-source/releases/tag/1.16.0) with remote cipher support.
+- youtube-source updated to [1.17.0](https://github.com/lavalink-devs/youtube-source/releases/tag/1.17.0) to fix "This video is unavailable". 
+- [lavasrc](https://github.com/topi314/LavaSrc) added to support additional audio sources. ([#54](https://github.com/plasmoapp/pv-addon-lavaplayer-lib/pull/54))
