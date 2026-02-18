@@ -4,7 +4,7 @@ kotlin = "1.8.22"
 pv = "2.1.5"
 
 lavaplayer = "2.2.6"
-lavaplayer-youtube-source = "1.17.0"
+lavaplayer-youtube-source = "ab5062530eca741d13fd8d1c414ff53cde7c4448-SNAPSHOT"
 lavasrc = "4.8.1"
 
 pv-gradle-plugin = "1.0.2-SNAPSHOT"
