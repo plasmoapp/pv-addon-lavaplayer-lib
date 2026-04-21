@@ -47,6 +47,8 @@ jobs:
       with:        
         modrinth-id: Kx9d4acU
         modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+        modrinth-dependencies: |
+          plasmo-voice
 
         version-type: ${{ inputs.release-type }}
 
