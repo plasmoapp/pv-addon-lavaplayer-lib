@@ -1,2 +1,2 @@
-- youtube-source updated to [1.17.0](https://github.com/lavalink-devs/youtube-source/releases/tag/1.17.0) to fix "This video is unavailable". 
+- youtube-source updated to [latest commit](https://github.com/lavalink-devs/youtube-source/commit/fb0eca58dde51169e9c1f4f44831386c4e175dbe) to fix "This video is unavailable" in some cases. 
 - [lavasrc](https://github.com/topi314/LavaSrc) added to support additional audio sources. ([#54](https://github.com/plasmoapp/pv-addon-lavaplayer-lib/pull/54))
