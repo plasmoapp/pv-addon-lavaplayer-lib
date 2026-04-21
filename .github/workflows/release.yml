@@ -60,6 +60,7 @@ jobs:
           fabric
           forge
           neoforge
+          folia
           paper
           spigot
           velocity
