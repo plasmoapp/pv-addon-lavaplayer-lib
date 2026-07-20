@@ -1,1 +1,1 @@
-- Fixed Twitch source always returning "No matches".
+- Updated `youtube-source` to latest snapshot to fix aac decoder error `Caused by: Expected decoding to halt, got: 5`.
