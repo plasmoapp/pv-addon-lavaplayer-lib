@@ -51,6 +51,4 @@ jobs:
       with:
         name: pv-addon-lavaplayer-lib
         archive: false
-        path: |
-          build/libs/*.jar
-          !build/libs/*-@(sources).jar
+        path: build/libs/!(*-@(dev|sources|javadoc)).jar
