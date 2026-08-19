@@ -56,3 +56,12 @@ jobs:
           !build/libs/*-dev.jar
           !build/libs/*-sources.jar
           !build/libs/*-javadoc.jar
+
+    - uses: actions/upload-artifact@v7.0.1
+      with:
+        name: pv-addon-lavaplayer-lib
+        path: |
+          build/libs/*.jar
+          !build/libs/*-dev.jar
+          !build/libs/*-sources.jar
+          !build/libs/*-javadoc.jar
