@@ -4,8 +4,7 @@ kotlin = "1.8.22"
 pv = "2.1.5"
 
 lavaplayer = "2.2.7"
-#lavaplayer-youtube-source = "c46ab888ee12bc4bcb37c8ebcaf180e85ae30368-SNAPSHOT"
-lavaplayer-youtube-source = "6ffc236a4b"
+lavaplayer-youtube-source = "b33460b38ad13b5cd07da75e46444397cf0ea2df-SNAPSHOT"
 lavasrc = "4.8.1"
 
 pv-gradle-plugin = "1.0.2-SNAPSHOT"
@@ -16,8 +15,7 @@ pv-server = { module = "su.plo.voice.api:server", version.ref = "pv" }
 pv-proxy = { module = "su.plo.voice.api:proxy", version.ref = "pv" }
 
 lavaplayer = { module = "dev.arbjerg:lavaplayer", version.ref = "lavaplayer" }
-#lavaplayer-youtube = { module = "dev.lavalink.youtube:common", version.ref = "lavaplayer-youtube-source" }
-lavaplayer-youtube = { module = "com.github.apehum.youtube-source:common", version.ref = "lavaplayer-youtube-source" }
+lavaplayer-youtube = { module = "dev.lavalink.youtube:common", version.ref = "lavaplayer-youtube-source" }
 lavasrc = { module = "com.github.topi314.lavasrc:lavasrc", version.ref = "lavasrc" }
 
 [plugins]

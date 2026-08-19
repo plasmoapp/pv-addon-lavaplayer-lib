@@ -1,1 +1,1 @@
-- Updated `youtube-source` to latest snapshot to fix aac decoder error `Caused by: Expected decoding to halt, got: 5`.
+- Updated `youtube-source` to [this snapshot](https://github.com/lavalink-devs/youtube-source/commit/b33460b38ad13b5cd07da75e46444397cf0ea2df) to fix `The page needs to be reloaded`.
